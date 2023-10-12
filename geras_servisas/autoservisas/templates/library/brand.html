@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Brand'ai su kuriais dirbame | {{ block.super }}{% endblock title %}
+{% block content %}
+<h1>Informacija apie Geras Servisas brand'us:</h1>
+<p>Geras Servisas</p>
+<ul>
+    <li>Lorem ipsum dolor sit amet. Et vero suscipit qui molestias explicabo At aliquid vero non dolor dolorem? Id voluptatem suscipit hic tenetur dolorem et aspernatur maiores aut consequatur perferendis ea laudantium provident ex necessitatibus laborum.
+
+        Et debitis animi qui voluptatem voluptatem et animi voluptatem ea aliquid omnis rem iste autem. Qui assumenda vitae est officiis dignissimos ut placeat magni ut architecto suscipit non vero quia aut repudiandae recusandae est beatae perspiciatis? Est facere delectus est minima aliquid est eligendi nihil sit nulla minus sit nihil nisi est laboriosam natus. Vel consequuntur voluptas eos laudantium iure aut consequuntur quae et necessitatibus nihil.
+        
+        Et fugit nostrum et natus vitae aut obcaecati consequatur? Aut enim quia ea officia autem et deserunt esse? Et nobis voluptatem ut consequatur reiciendis aut internos alias ea nihil facilis id eveniet omnis in officiis consectetur id laboriosam aspernatur.</li>
+</ul>
+<h2>Automobiliu brand'ai su kuriais dirbame:</h2>
+<ul>
+    {% for car_model in make %}
+    <li>{{ car_model.make }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

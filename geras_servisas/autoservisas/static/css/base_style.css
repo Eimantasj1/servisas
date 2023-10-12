@@ -1,0 +1,217 @@
+body {
+    font-family: sans-serif; 
+    background-color: #CCCCCC; 
+    padding: 0; margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex-grow: 1;
+}
+header, footer {
+    padding: 1rem 0;
+    margin: 0;
+}
+header {
+    background-color: #333333;
+    color: #afafaf;
+}
+footer {
+    background-color: #afafaf;
+}
+header a {
+    color: #d8d8d8;
+    text-decoration: none;
+}
+header a:hover {
+    color: #e04040;
+}
+header ul.nav {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-inline-start: 0;
+    padding: 0; margin: 0;
+}
+header ul.nav li {
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+}
+h1, h2 { 
+    border-bottom: 2px solid #a42714; 
+    box-shadow: 0 3px 5px #00000033;
+    padding: 1rem;
+    background-color: #d8d8d8;
+}
+p {
+    padding: 0 1rem;
+}
+ul.nice-orders, ul.errorlist {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding-inline-start: 0;
+    padding: 0.5rem;
+    margin: 1rem;
+    border: 1px solid #a42714;
+    background-color: #c0c0c0;
+    box-shadow: 1px 3px 5px #00000033;
+}
+ul.nice-orders li, ul.errorlist li {
+    margin: 0.25rem 0;
+    padding: 0.25rem 0.5rem;
+    border-bottom: 1px solid #a42714;
+}
+/* Kontaktine forma -->*/
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+*, 
+*:before, 
+*:after {
+   box-sizing: border-box; 
+}
+
+html, body {
+  background: #f1f1f1;
+  font-family: 'Merriweather', sans-serif;
+  padding: 1em;
+}
+
+h1 {
+   text-align: center;
+   color: #0b0b0b;
+   text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
+}
+
+form {
+   max-width: 600px;
+   text-align: center;
+   margin: 20px auto;
+}
+  
+input, textarea {
+   border: 0; 
+   outline: 0;
+   padding: 1em;
+   border-radius: 8px;
+   display: block;
+   width: 100%;
+   margin-top: 1em;
+   font-family: 'Merriweather', sans-serif;
+   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+   resize: none;
+}
+
+input:focus, textarea:focus {
+   box-shadow: 0 0px 2px rgba(231, 76, 60, 1) !important;
+}
+
+#input-submit {
+   color: white; 
+   background: #e74c3c;
+   cursor: pointer;
+}
+
+#input-submit:hover {
+   box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6); 
+}
+
+textarea {
+   height: 126px;
+}
+
+.half {
+   float: left;
+   width: 48%;
+   margin-bottom: 1em;
+}
+
+.right {
+   width: 50%;
+}
+
+.left {
+   margin-right: 2%; 
+}
+
+@media (max-width: 480px) {
+   .half {
+      width: 100%; 
+      float: none;
+      margin-bottom: 0; 
+   }
+}
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+/**/
+ul.errorlist {
+    background-color: #e0c0c0;
+}
+ul li.spacer {
+    flex-grow: 1
+}
+ul.errorlist {
+    background-color: #e0c0c0;
+}
+ul li.spacer {
+    flex-grow: 1
+}
+form p label {
+    min-width: 12rem;
+    display: inline-block;
+}
+div.box {
+    margin: 0.25rem 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #999999;
+}
+.box-error {
+    background-color: #e0c0c0;
+}
+.box-success {
+    background-color: #c0e0c0;
+}
+.box-warning {
+    background-color: #e0e0c0;
+}
+.box-info {
+    background-color: #c0c0e0;
+}
+.box-debug {
+    background-color: #a8a8a8;
+}
+.float-right {
+    float: right;
+}
+a.btn {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    border-radius: 1rem;
+    padding: 0.25rem;
+    margin: 0.25rem 0.125rem;
+}
+a.btn:hover {
+    background-color: #e8e8e8;
+}
+.is-overdue {
+    background-color: #fec0c0 !important;
+}
+.is-overdue:hover{
+    background-color: #ffcccc !important;
+}
+.profile-photo {
+    margin: 1rem;
+    max-width: calc(100% - 4rem);
+    width: 500px;
+    border: 2px solid #a09933;
+}

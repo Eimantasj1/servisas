@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Sveiki atvyke i {{ block.super }}{% endblock title %}
+{% block content %}
+<h1>Sveiki atvyke i Geras Servisas</h1>
+<p>Informacija:</p>
+<ul>
+    <li>Is viso uzsakymu:<font color="color:red";> {{ num_orders }}</li></font>
+    <li>Registruota automobiliu:<font color="color:red";> {{ num_cars }}</li></font>
+    <li>Is viso uzsakymu:<font color="color:red";> {{ num_orders }}</li></font>
+</ul>
+<h2>Automobiliu brand'ai:</h2>
+<ul>
+    {% for car_model in make %}
+    <li>{{ car_model.make }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

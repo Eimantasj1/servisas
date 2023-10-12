@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Atsijungta {{ block.super }}{% endblock title %}
+{% block content %}
+<h1>Viso gerp</h1>
+<p>Jus atsijungete nuo Geras Servisas. 
+    Galite <a href="{% url "login" %}">prisijungti</a> is naujo.</p>
+{% endblock content %}

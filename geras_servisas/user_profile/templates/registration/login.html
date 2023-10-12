@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Prisijungti {{ block.super }}{% endblock title %}
+{% block content %}
+<h1>Prisijungti</h1>
+<form method="post" action="{% url "login" %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p><button type="submit">Prisijungti</button></p>
+</form>
+<p><a href="{% url "password_reset" %}">Pamirsote slaptazodi?</a></p>
+{% endblock content %}

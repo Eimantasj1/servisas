@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title%}Uzsakymai | {{ block.super }}{% endblock title%}
+{% block content %}
+<h1>Uzsakymai</h1>
+{% if order_list %}
+    <ul class="nice-orders">
+        {% for order in order_list %}
+            <li>{{ order }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Kol kas nera uzsakymu</p>
+{% endif %}
+{% endblock content %}
