@@ -1,0 +1,29 @@
+version: '3.7'
+services:
+  dev:
+    build: .
+    image: servisas:dev
+    container_name: servisas.dev
+    tty: true
+    stdin_open: true
+    restart: always
+    ports:
+      - 8000:8000
+    volumes:
+    - ./geras_servisas:/app
+    command: >
+      bash -c "python manage.py migrate &&
+      python manage.py collectstatic --noinput &&
+      gunicorn geras_servisas.wsgi --bind 0.0.0.0:8000"
+  nginx:
+    build: ./nginx/
+    image: nginx:geras_servisas
+    container_name: geras_servisas.nginx
+    restart: always
+    ports:
+      - 80:80
+    links:
+     - dev:servisas
+    volumes:
+      - ./geras_servisas/static:/app/static
+      - ./geras_servisas/media:/app/media
